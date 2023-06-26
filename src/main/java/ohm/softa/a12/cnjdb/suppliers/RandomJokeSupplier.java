@@ -1,9 +1,8 @@
-package ohm.softa.a12.icndb.suppliers;
+package ohm.softa.a12.cnjdb.suppliers;
 
-import ohm.softa.a12.icndb.ICNDBApi;
-import ohm.softa.a12.icndb.ICNDBService;
+import ohm.softa.a12.cnjdb.CNJDBApi;
+import ohm.softa.a12.cnjdb.CNJDBService;
 import ohm.softa.a12.model.JokeDto;
-import ohm.softa.a12.model.ResponseWrapper;
 import org.apache.commons.lang3.NotImplementedException;
 
 /**
@@ -13,13 +12,13 @@ import org.apache.commons.lang3.NotImplementedException;
 public final class RandomJokeSupplier {
 
     /* ICNDB API proxy to retrieve jokes */
-    private final ICNDBApi icndbApi;
+    private final CNJDBApi icndbApi;
 
     public RandomJokeSupplier() {
-        icndbApi = ICNDBService.getInstance();
+        icndbApi = new CNJDBService().getInstance();
     }
 
-    public ResponseWrapper<JokeDto> get() {
+    public JokeDto get() {
         /* TODO fetch a random joke synchronously
          * if an exception occurs return null */
         throw new NotImplementedException("Method `get()` is not implemented");

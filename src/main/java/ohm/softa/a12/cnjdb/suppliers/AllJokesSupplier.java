@@ -1,9 +1,8 @@
-package ohm.softa.a12.icndb.suppliers;
+package ohm.softa.a12.cnjdb.suppliers;
 
-import ohm.softa.a12.icndb.ICNDBApi;
-import ohm.softa.a12.icndb.ICNDBService;
+import ohm.softa.a12.cnjdb.CNJDBApi;
+import ohm.softa.a12.cnjdb.CNJDBService;
 import ohm.softa.a12.model.JokeDto;
-import ohm.softa.a12.model.ResponseWrapper;
 import org.apache.commons.lang3.NotImplementedException;
 
 /**
@@ -14,15 +13,15 @@ import org.apache.commons.lang3.NotImplementedException;
 public final class AllJokesSupplier {
 
     /* ICNDB API proxy to retrieve jokes */
-    private final ICNDBApi icndbApi;
+    private final CNJDBApi icndbApi;
 
     public AllJokesSupplier() {
-        icndbApi = ICNDBService.getInstance();
+        icndbApi = new CNJDBService().getInstance();
         /* TODO fetch the total count of jokes the API is aware of
          * to determine when all jokes are iterated and the counters have to be reset */
     }
 
-    public ResponseWrapper<JokeDto> get() {
+    public JokeDto get() {
         /* TODO retrieve the next joke
          * note that there might be IDs that are not present in the database
          * you have to catch an exception and continue if no joke was retrieved to an ID
