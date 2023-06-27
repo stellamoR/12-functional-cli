@@ -1,7 +1,6 @@
 plugins {
 	id 'java'
 	id 'application'
-	id "io.freefair.lombok" version "6.0.0-m2"
 	id "com.github.ben-manes.versions" version "0.20.0"
 }
 
@@ -25,7 +24,6 @@ dependencies {
 	implementation("com.squareup.retrofit2:retrofit:$retrofit2_version")
 	implementation("com.squareup.retrofit2:converter-gson:$retrofit2_version")
 	implementation("com.squareup.retrofit2:adapter-java8:$retrofit2_version")
-	implementation 'org.projectlombok:lombok:1.18.26'
 
 	/* JUnit 5 */
 	testCompile("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
