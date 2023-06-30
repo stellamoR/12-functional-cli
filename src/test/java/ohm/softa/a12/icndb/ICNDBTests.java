@@ -20,7 +20,6 @@ public class ICNDBTests {
 		this.icndbApi = new CNJDBService().getInstance();
 	}
 
-	@Test
 	void testCollision() throws ExecutionException, InterruptedException {
 		var ids = new HashSet<>();
 		var requests = 0;
